@@ -1,0 +1,99 @@
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.summary {
+  text-align: end;
+  background: linear-gradient(#000e3c 15%, #69abff 77%, #e5c588 93%);
+  /*background: linear-gradient(#000e3c 15%, #69c1ff 100%);*/
+  height: 100vh;
+  max-width: 40%;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content {
+  z-index: 2;
+  position: relative;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: calc(100vh - 4em);
+}
+
+.short-bio {
+  width: 65%;
+}
+
+.icons {
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 1em 0;
+}
+
+.education {
+  transition: color 0.3s linear;
+  margin: 1em 0 0 0;
+}
+
+.education:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s linear;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+}
+
+a {
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+a,
+p,
+h1,
+i {
+  transition: color 0.3s linear;
+}
+a:hover,
+p:hover,
+h1:hover,
+i:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s linear;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a + a {
+  margin-top: .3em;
+}
+
+.main {
+  width: 60%;
+  background-color: #b0c4de;
+  padding: 2em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.mountains {
+  position: fixed;
+  max-width: 40%;
+  bottom: 0px;
+  left: 0;
+}
