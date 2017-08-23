@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
+import Summary from './components/Summary';
 
-import mountains from './mountains.svg';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <Summary />
           <Routes />
         </div>
       </BrowserRouter>

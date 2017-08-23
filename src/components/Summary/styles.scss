@@ -1,0 +1,73 @@
+@import "theme/variables.scss";
+
+.summary {
+  text-align: end;
+  background: linear-gradient(#000e3c 15%, #69abff 77%, #e5c588 93%);
+  /*background: linear-gradient(#000e3c 15%, #69c1ff 100%);*/
+  height: 100vh;
+  max-width: 40%;
+  color: rgba($white, 0.7);
+  .mountains {
+    position: fixed;
+    max-width: 40%;
+    bottom: 0px;
+    left: 0;
+  }
+  .content {
+    z-index: 2;
+    position: relative;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: calc(100vh - 4em);
+    .short-bio {
+      width: 65%;
+    }
+    .icons {
+      font-size: 2em;
+      display: flex;
+      flex-direction: row;
+      margin: 0 0 1em 0;
+    }
+    .education {
+      transition: color 0.3s linear;
+      margin: 1em 0 0 0;
+      &:hover {
+        color: rgba($white, 0.9);
+        transition: color 0.3s linear;
+      }
+      h4 {
+        margin-bottom: 0;
+      }
+      ul {
+        margin-top: 0;
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+    a,
+    p,
+    h1,
+    i {
+      transition: color 0.3s linear;
+      &:hover {
+        color: rgba($white, 0.9);
+        transition: color 0.3s linear;
+      }
+    }
+    a {
+      color: rgba($white, 0.7);
+      text-decoration: none;
+      & + a {
+        margin-top: .3em;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

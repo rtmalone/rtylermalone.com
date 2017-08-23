@@ -1,31 +1,56 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import mountains from './mountains.svg';
 
-const Summary = () => {
-  return (
-    <div className="summary">
-      <div className="content">
-        <h1>Tyler Malone</h1>
-        <p className="short-bio">
-          Tyler is a web engineer based in Chattanooga, TN specializing in
-          React, Firebase, and Google Cloud Functions.
-        </p>
-        <span className="icons">
-          <i className="rtm-github-squared" />
-          <i className="rtm-linkedin-squared" />
-          <i className="rtm-mail-squared" />
-        </span>
-        <Link to="/">Projects</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-        <div className="education">
-          <h4>EDUCATION</h4>
-          <ul>
-            <li>B.A. Digital Media</li>
-            <li>Nashville Software School</li>
-          </ul>
+import './styles.css';
+
+class Summary extends React.Component {
+  aboutClick = () => {
+    console.log('about');
+    import('../About')
+      .then(module => {
+        console.log(module);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  render() {
+    return (
+      <div className="summary">
+        <div className="content">
+          <Link to="/">
+            <h1>Tyler Malone</h1>
+          </Link>
+          <p className="short-bio">
+            Tyler is a web engineer based in Chattanooga, TN specializing in
+            React, Firebase, and Google Cloud Functions.
+          </p>
+          <span className="icons">
+            <i className="rtm-github-squared" />
+            <i className="rtm-linkedin-squared" />
+            <i className="rtm-mail-squared" />
+          </span>
+          <nav>
+            <Link to="/projects/professional">Projects</Link>
+            <Link to="/about" onClick={this.aboutClick}>
+              About
+            </Link>
+            <Link to="/blog">Blog</Link>
+          </nav>
+          <div className="education">
+            <h4>EDUCATION</h4>
+            <ul>
+              <li>B.A. Digital Media</li>
+              <li>Nashville Software School</li>
+            </ul>
+          </div>
         </div>
+        <img className="mountains" src={mountains} alt="mountains" />
       </div>
-      <img className="mountains" src={mountains} alt="mountains" />
-    </div>
-  );
-};
+    );
+  }
+}
+
+export default Summary;
