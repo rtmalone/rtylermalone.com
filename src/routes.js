@@ -1,9 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Projects from './components/Projects';
-import About from './components/About';
-import Bio from './components/Bio';
+import AsyncComponent from './components/AsyncComponent';
+
+const Projects = AsyncComponent(() => import('./components/Projects'));
+const About = AsyncComponent(() => import('./components/About'));
+const Bio = AsyncComponent(() => import('./components/Bio'));
 
 const Routes = () => {
   return (
