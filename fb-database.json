@@ -1,0 +1,40 @@
+{
+  "projects":{
+    "professional":[
+      {
+        "name": "Rabble Web 3.0",
+        "company": "Rabble",
+        "description" : "Built with React."
+      },
+      {
+        "name": "Rabble Web 2.0",
+        "company": "Rabble",
+        "description": "Built with React, Redux"
+      },
+      {
+        "name": "IH Connect",
+        "company": "InvisionHeart",
+        "description" : "Node/Express app"
+      },
+      {
+        "name": "IH Control",
+        "company": "InvisionHeart",
+        "description" : "Node/Express app"
+      }
+    ],
+    "personal": [
+      {
+        "name": "rtylermalone.com",
+        "description" : "Built with React"
+      },
+      {
+        "name": "Tell the Time",
+        "description" : "Built with React"
+      },
+      {
+        "name": "Pixt",
+        "description" : "Node/Express app"
+      }
+    ]
+  }
+}

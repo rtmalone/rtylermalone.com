@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Summary />
+          {/* <Summary /> */}
           <Routes />
         </div>
       </BrowserRouter>

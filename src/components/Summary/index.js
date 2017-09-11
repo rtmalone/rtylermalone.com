@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Header, Icon } from 'semantic-ui-react';
 import mountains from './mountains.svg';
 
 import './styles.css';
@@ -21,7 +22,9 @@ class Summary extends React.Component {
       <div className="summary">
         <div className="content">
           <Link to="/">
-            <h1>Tyler Malone</h1>
+            <Header as="h1" inverted>
+              Tyler Malone
+            </Header>
           </Link>
           <p className="short-bio">
             Tyler is a web engineer based in Chattanooga, TN specializing in
@@ -33,14 +36,16 @@ class Summary extends React.Component {
             <i className="rtm-mail-squared" />
           </span>
           <nav>
-            <Link to="/projects/professional">Projects</Link>
+            <Link to="/">Projects</Link>
             <Link to="/about" onClick={this.aboutClick}>
               About
             </Link>
             <Link to="/blog">Blog</Link>
           </nav>
           <div className="education">
-            <h4>EDUCATION</h4>
+            <Header as="h4" inverted>
+              EDUCATION
+            </Header>
             <ul>
               <li>B.A. Digital Media</li>
               <li>Nashville Software School</li>

@@ -13,6 +13,9 @@
     bottom: 0px;
     left: 0;
   }
+  .header {
+    opacity: 0.7;
+  }
   .content {
     z-index: 2;
     position: relative;
@@ -51,12 +54,12 @@
     }
     a,
     p,
-    h1,
+    .header,
     i {
-      transition: color 0.3s linear;
+      transition: opacity 0.3s linear;
       &:hover {
-        color: rgba($white, 0.9);
-        transition: color 0.3s linear;
+        opacity: 0.95;
+        transition: opacity 0.3s linear;
       }
     }
     a {
