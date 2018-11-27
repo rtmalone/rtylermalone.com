@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Routes from './routes';
-import Summary from './components/Summary';
+import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 
-import './App.css';
+import styles from "./app.module.css";
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          {/* <Summary /> */}
+        <div className={styles.app}>
           <Routes />
         </div>
       </BrowserRouter>
