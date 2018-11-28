@@ -5,17 +5,15 @@ import { Footer } from "./components";
 
 import styles from "./app.module.css";
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className={styles.app}>
-          <Routes />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className={styles.app}>
+        <Footer />
+        <Routes />
+      </div>
+    </BrowserRouter>
+  );
+};
 
 export default App;

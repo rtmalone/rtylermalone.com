@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "react-scripts start",
-    "build": "npm run build-css && react-scripts build",
+    "deploy": "firebase deploy",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sprite": "rm -rf static/icons/sprite && node tasks/sprite.js \"./static/icons/*.svg\" \"./static/icons/sprite\"",
