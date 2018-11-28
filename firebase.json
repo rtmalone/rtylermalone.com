@@ -7,8 +7,12 @@
         "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
       },
       {
-        "source": "**/*.@(jpg|png|js|css)",
-        "headers": [{ "key": "Cache-Control", "value": "max-age=86400" }]
+        "source": "**/*.@(html)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "**/*.@(jpg|png|js|css|ttf)",
+        "headers": [{ "key": "Cache-Control", "value": "max-age=1209600" }]
       }
     ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],

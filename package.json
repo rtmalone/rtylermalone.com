@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "react-scripts start",
-    "deploy": "firebase deploy",
+    "deploy": "npm run build && firebase deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

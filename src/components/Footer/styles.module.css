@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: auto;
+  width: 400px;
+}
+
+.footer {
+  background-color: transparent;
+  width: 100%;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footerLink {
+  color: var(--darkBlue);
+}
+
+.footerLink:hover {
+  color: var(--aquamarine);
+  background-color: var(--darkBlue);
+  transition: all 0.3s var(--customEase);
+}
+
+.footerLink:active {
+  background-color: #264193;
+}

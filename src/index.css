@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Oswald Light"), url(./fonts/Oswald-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"),
+    url(./fonts/Oswald-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Oswald SemiBold"),
+    url(./fonts/Oswald-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Raleway Light"), url(./fonts/Raleway-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway Regular"),
+    url(./fonts/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"),
+    url(./fonts/Raleway-SemiBold.ttf) format("truetype");
+}
+
+:root {
+  --lightBlue: #b0c4de;
+  --teal: rgba(34, 174, 195, 1);
+  --darkBlue: #345acd;
+  --aquamarine: #7fffd4;
+  --raleway: "Raleway", sans-serif;
+  --oswald: "Oswald", sans-serif;
+  --customEase: cubic-bezier(0, 0.75, 1, 0.67);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--raleway);
+  font-weight: 400;
+  font-size: 18px;
+  background: var(--lightBlue);
+  background: linear-gradient(180deg, var(--teal) 0%, var(--lightBlue) 100%)
+    no-repeat;
+  /* background: var(--lightBlue);
+  background: linear-gradient(180deg, var(--teal) 0%, #010000 100%)
+    no-repeat; */
+  /* background: rgb(0, 144, 255);
+  background: linear-gradient(
+      180deg,
+      rgba(0, 144, 255, 1) 4%,
+      rgba(0, 191, 255, 1) 40%,
+      rgba(0, 243, 255, 1) 100%
+    )
+    no-repeat; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--oswald);
+  font-weight: 400;
+}
+a {
+  color: var(--aquamarine);
+}
+a:hover {
+  background-color: var(--aquamarine);
+  color: var(--darkBlue);
+  transition: all 0.3s var(--customEase);
+}
+a:active {
+  background-color: #62caa7;
+}
+ul {
+  list-style: none;
+}
+nav {
+  font-size: 1.5em;
+}
