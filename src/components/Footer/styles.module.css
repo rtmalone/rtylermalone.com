@@ -7,6 +7,18 @@
   width: 400px;
 }
 
+.nav li {
+  padding: 2px;
+  border-radius: 3px;
+  height: 28px;
+  width: 28px;
+}
+
+.nav li:hover {
+  background-color: var(--darkBlue);
+  transition: background-color 0.3s var(--customEase);
+}
+
 .footer {
   background-color: transparent;
   width: 100%;
@@ -19,12 +31,12 @@
   color: var(--darkBlue);
 }
 
-.footerLink:hover {
-  color: var(--aquamarine);
-  background-color: var(--darkBlue);
-  transition: all 0.3s var(--customEase);
+a svg:hover path {
+  fill: var(--aquamarine);
+  transition: fill 0.3s var(--customEase);
 }
 
+.footerLink:hover,
 .footerLink:active {
-  background-color: #264193;
+  background-color: transparent;
 }

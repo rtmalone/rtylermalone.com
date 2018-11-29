@@ -9,7 +9,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sprite": "rm -rf static/icons/sprite && node tasks/sprite.js \"./static/icons/*.svg\" \"./static/icons/sprite\"",
     "images": "node tasks/images.js \"./static/images/*.{jpg,png,svg}\" \"./static/*.png\""
   },
   "browserslist": [
@@ -28,7 +27,6 @@
     "imagemin": "^6.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0",
-    "svg-sprite": "^1.5.0"
+    "imagemin-svgo": "^7.0.0"
   }
 }

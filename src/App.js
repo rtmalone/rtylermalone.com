@@ -9,8 +9,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={styles.app}>
-        <Footer />
         <Routes />
+        <Footer />
       </div>
     </BrowserRouter>
   );

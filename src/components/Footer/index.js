@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { ReactComponent as EmailIcon } from "../../static/icons/icon-email.svg";
+import { ReactComponent as GithubIcon } from "../../static/icons/icon-github.svg";
+import { ReactComponent as LinkedIn } from "../../static/icons/icon-linkedin.svg";
+import { ReactComponent as MediumIcon } from "../../static/icons/icon-medium.svg";
 
 const Footer = () => {
   return (
@@ -7,20 +11,22 @@ const Footer = () => {
       <ul className={styles.nav}>
         <li>
           <a className={styles.footerLink} href="mailto:rtylermalon@gmail.com">
-            Contact
+            <EmailIcon />
           </a>
         </li>
         <li>
-          <a
-            className={styles.footerLink}
-            href="https://linkedin.com/rtylermalone"
-          >
-            LinkedIn
+          <a className={styles.footerLink} href="https://linkedin.com/rtylermalone">
+            <LinkedIn />
           </a>
         </li>
         <li>
           <a className={styles.footerLink} href="https://github.com/rtmalone">
-            Github
+            <GithubIcon />
+          </a>
+        </li>
+        <li>
+          <a className={styles.footerLink} href="https://medium.com/@tylermalone">
+            <MediumIcon />
           </a>
         </li>
       </ul>

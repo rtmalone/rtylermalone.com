@@ -14,11 +14,6 @@ const Temp = () => {
         <a href="https://pylon.com">Pylon ai</a>
       </p>
       <img className={styles.profilePic} src={profilePic} alt="Tyler Malone" />
-      <span className={styles.icons}>
-        <i className="rtm-github-squared" />
-        <i className="rtm-linkedin-squared" />
-        <i className="rtm-mail-squared" />
-      </span>
     </div>
   );
 };

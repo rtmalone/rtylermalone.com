@@ -42,6 +42,7 @@
 :root {
   --lightBlue: #b0c4de;
   --teal: rgba(34, 174, 195, 1);
+  --articBlue: rgb(43, 225, 243);
   --darkBlue: #345acd;
   --aquamarine: #7fffd4;
   --raleway: "Raleway", sans-serif;
@@ -59,8 +60,7 @@ body {
   background: linear-gradient(180deg, var(--teal) 0%, var(--lightBlue) 100%)
     no-repeat;
   /* background: var(--lightBlue);
-  background: linear-gradient(180deg, var(--teal) 0%, #010000 100%)
-    no-repeat; */
+  background: linear-gradient(180deg, var(--teal) 0%, #010000 100%) no-repeat; */
   /* background: rgb(0, 144, 255);
   background: linear-gradient(
       180deg,
