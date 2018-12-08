@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.css";
+import styles from "./footer.module.css";
 import { ReactComponent as EmailIcon } from "../../static/icons/icon-email.svg";
 import { ReactComponent as GithubIcon } from "../../static/icons/icon-github.svg";
 import { ReactComponent as LinkedIn } from "../../static/icons/icon-linkedin.svg";
@@ -15,7 +15,10 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a className={styles.footerLink} href="https://linkedin.com/rtylermalone">
+          <a
+            className={styles.footerLink}
+            href="https://linkedin.com/rtylermalone"
+          >
             <LinkedIn />
           </a>
         </li>
@@ -25,7 +28,10 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a className={styles.footerLink} href="https://medium.com/@tylermalone">
+          <a
+            className={styles.footerLink}
+            href="https://medium.com/@tylermalone"
+          >
             <MediumIcon />
           </a>
         </li>

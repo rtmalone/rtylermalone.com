@@ -1,14 +1,17 @@
 .temp {
   color: #345acd;
-  width: 600px;
+  width: 290px;
 }
+
 h1 {
   margin-top: 0;
   font-size: 2em;
 }
+
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
+
 .profilePic {
   width: 80px;
   height: 80px;
@@ -25,4 +28,45 @@ p {
 
 .heading h1 {
   margin: 0;
+}
+
+.bio {
+  transition: all 200ms ease-in;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.collapse {
+  height: 110px;
+}
+
+.expand {
+  height: 290px;
+}
+
+small {
+  cursor: pointer;
+  transition: all 0.3s var(--customEase);
+}
+
+small:hover {
+  background-color: var(--aquamarine);
+}
+
+@media (min-width: 700px) {
+  .temp {
+    width: 600px;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .collapse {
+    height: 90px;
+  }
+
+  .expand {
+    height: 220px;
+  }
 }

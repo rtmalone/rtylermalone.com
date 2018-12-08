@@ -50,12 +50,16 @@
   --customEase: cubic-bezier(0, 0.75, 1, 0.67);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--raleway);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   background: var(--lightBlue);
   background: linear-gradient(180deg, var(--teal) 0%, var(--lightBlue) 100%)
     no-repeat;
@@ -95,4 +99,10 @@ ul {
 }
 nav {
   font-size: 1.5em;
+}
+
+@media (min-width: 700px) {
+  body {
+    font-size: 18px;
+  }
 }
