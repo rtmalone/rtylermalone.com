@@ -2,12 +2,14 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
+  font-display: fallback;
   src: local("Oswald Light"), url(./fonts/Oswald-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: local("Oswald Regular"),
     url(./fonts/Oswald-Regular.ttf) format("truetype");
 }
@@ -15,6 +17,7 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
+  font-display: fallback;
   src: local("Oswald SemiBold"),
     url(./fonts/Oswald-SemiBold.ttf) format("truetype");
 }
@@ -22,18 +25,21 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
+  font-display: fallback;
   src: local("Raleway Light"), url(./fonts/Raleway-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: local("Raleway Regular"),
     url(./fonts/Raleway-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Raleway";
   font-style: normal;
+  font-display: fallback;
   font-weight: 600;
   src: local("Raleway SemiBold"),
     url(./fonts/Raleway-SemiBold.ttf) format("truetype");
