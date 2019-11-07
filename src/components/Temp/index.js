@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./temp.module.css";
-import profilePic from "../../static/images/profile-pic.jpg";
+import profilePic from "../../static/images/rtm_2019.jpg";
 
 class Temp extends React.PureComponent {
   state = {
