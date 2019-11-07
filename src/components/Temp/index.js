@@ -37,7 +37,8 @@ class Temp extends React.PureComponent {
           <p>
             Tyler is a web engineer based in Chattanooga, TN building solutions
             for AI with React, React Native, TypeScript & GraphQL at{" "}
-            <a href="https://pylon.com">Pylon ai</a>
+            <a href="https://spokestack.io">Spokestack</a> - formerly known as
+            Pylon
           </p>
           <p style={{ fontSize: "1em" }}>
             Previously, Tyler has worked on teams developing a social platform
