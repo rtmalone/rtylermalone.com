@@ -38,7 +38,7 @@ class Temp extends React.PureComponent {
             Tyler is a web engineer based in Chattanooga, TN building solutions
             for AI with React, React Native, TypeScript & GraphQL at{" "}
             <a href="https://spokestack.io">Spokestack</a> - formerly known as
-            Pylon
+            Pylon.
           </p>
           <p style={{ fontSize: "1em" }}>
             Previously, Tyler has worked on teams developing a social platform
@@ -49,7 +49,7 @@ class Temp extends React.PureComponent {
           </p>
         </div>
         <small onClick={this.toggle}>
-          {expand ? "Oh, that's nice" : "What else?"}
+          {expand ? "Oh, that's nice." : "What else?"}
         </small>
       </div>
     );
