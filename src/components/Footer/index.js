@@ -17,7 +17,7 @@ const Footer = () => {
         <li>
           <a
             className={styles.footerLink}
-            href="https://linkedin.com/rtylermalone"
+            href="https://linkedin.com/in/rtylermalone"
           >
             <LinkedIn />
           </a>
