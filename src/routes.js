@@ -1,9 +1,9 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Temp from "./components/Temp";
+import Main from "./components/Main";
 
 const Routes = () => {
-  return <Route exact path="/" component={Temp} />;
+  return <Route exact path="/" component={Main} />;
 };
 
 export default Routes;
