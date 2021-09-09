@@ -23,14 +23,13 @@ export default function Temp() {
       >
         <p>
           Tyler is a web engineer based in Chattanooga, TN building solutions
-          for AI with React, React Native, TypeScript & GraphQL at{" "}
-          <a href="https://spokestack.io">Spokestack</a> - formerly known as
-          Pylon.
+          for Salesforce with Lightning Web Components, Angular & Apex at{" "}
+          <a href="https://codescience.com">CodeScience</a>.
         </p>
         <p style={{ fontSize: "1em" }}>
-          Previously, Tyler has worked on teams developing a social platform for
+          Previously, Tyler has worked on teams developing UI for AI powered applications, a social platform for
           sport fans, a user powered broadcasting platform focused on sports,
-          and web apps supporting an innovative, hand held, 12-lead ECG system.
+          and web apps supporting an innovative, 12-lead ECG system.
           These various projects utilized React, Firebase, Google Cloud
           Functions, AngularJS, Express, and jQuery.
         </p>
