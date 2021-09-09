@@ -1,6 +1,6 @@
 export function getMonth() {
   const now = new Date();
-  const month = now.getMonth();
+  const month = now.getMonth() + 1;
 
   if (month === 1 || month === 2 || month === 12) {
     return "winter";
