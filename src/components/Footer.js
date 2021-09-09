@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./footer.module.css";
-import { ReactComponent as EmailIcon } from "../../static/icons/icon-email.svg";
-import { ReactComponent as GithubIcon } from "../../static/icons/icon-github.svg";
-import { ReactComponent as LinkedIn } from "../../static/icons/icon-linkedin.svg";
-import { ReactComponent as MediumIcon } from "../../static/icons/icon-medium.svg";
+import styles from "./styles/footer.module.css";
+import { ReactComponent as EmailIcon } from "../static/icons/icon-email.svg";
+import { ReactComponent as GithubIcon } from "../static/icons/icon-github.svg";
+import { ReactComponent as LinkedIn } from "../static/icons/icon-linkedin.svg";
+import { ReactComponent as MediumIcon } from "../static/icons/icon-medium.svg";
 
 const Footer = () => {
   return (
