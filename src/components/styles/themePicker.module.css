@@ -1,0 +1,39 @@
+.themePicker {
+  display: flex;
+  margin: 0px;
+  position: absolute;
+  top: 8px;
+  padding: 0px;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 14px;
+}
+
+.themePicker li {
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
+.themePicker li:hover {
+  transition: color 0.3s var(--customEase),
+    background-color 0.3s var(--customEase);
+  cursor: pointer;
+  background-color: var(--text-color);
+  color: var(--link-color);
+}
+
+.active {
+  background-color: var(--text-color);
+  color: var(--link-color);
+}
+
+@media (min-width: 700px) {
+  .themePicker {
+    left: 8px;
+    flex-direction: column;
+    width: initial;
+  }
+  .themePicker li + li {
+    margin-top: 10px;
+  }
+}

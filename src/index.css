@@ -46,8 +46,10 @@
 }
 
 :root {
-  --lightBlue: #b0c4de;
-  --teal: rgba(34, 174, 195, 1);
+  --secondary: #b0c4de;
+  --primary: rgba(34, 174, 195, 1);
+  --text-color: #345acd;
+  --link-color: #7fffd4;
   --articBlue: rgb(43, 225, 243);
   --darkBlue: #345acd;
   --aquamarine: #7fffd4;
@@ -63,11 +65,12 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--text-color);
   font-family: var(--raleway);
   font-weight: 400;
   font-size: 15px;
   background: var(--lightBlue);
-  background: linear-gradient(180deg, var(--teal) 0%, var(--lightBlue) 100%)
+  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%)
     no-repeat;
   /* background: var(--lightBlue);
   background: linear-gradient(180deg, var(--teal) 0%, #010000 100%) no-repeat; */
@@ -90,15 +93,16 @@ h6 {
   font-weight: 400;
 }
 a {
-  color: var(--aquamarine);
+  color: var(--link-color);
+  /* transition: all 0.3s var(--customEase); */
 }
 a:hover {
-  background-color: var(--aquamarine);
-  color: var(--darkBlue);
+  background-color: var(--link-color);
+  color: var(--text-color);
   transition: all 0.3s var(--customEase);
 }
 a:active {
-  background-color: #62caa7;
+  background-color: var(--link-color);
 }
 ul {
   list-style: none;
