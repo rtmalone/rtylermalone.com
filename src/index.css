@@ -106,6 +106,8 @@ a:active {
 }
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 nav {
   font-size: 1.5em;

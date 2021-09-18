@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "date": "Oct 2014",
+      "title": "Web Developer",
+      "city": "Nashville",
+      "state": "TN",
+      "company": "LogicFI",
+      "companyURL": "https://logicfi.com",
+      "tech": ["Foundation", "PHP"],
+      "platform": "web apps for a financial lending platform"
+    },
+    {
+      "date": "Jan 2015",
+      "title": "Web Engineer",
+      "city": "Nashville",
+      "state": "TN",
+      "company": "InvisionHeart",
+      "companyURL": "#",
+      "tech": ["jQuery", "Node.js", "Express"],
+      "platform": "web apps supporting an innovative ECG system"
+    },
+    {
+      "date": "Dec 2015",
+      "title": "Web Engineer",
+      "city": "Nashville",
+      "state": "TN",
+      "company": "Rabble",
+      "companyURL": "#",
+      "tech": ["React", "AngularJS", "Firebase", "Google Cloud Functions"],
+      "platform": "a platform for sport fans"
+    },
+    {
+      "date": "Nov 2017",
+      "title": "Frontend Developer",
+      "city": "Chattanooga",
+      "state": "TN",
+      "company": "Spokestack AI",
+      "companyURL": "https://spokestack.io",
+      "tech": ["React", "Typescript", "GraphQL"],
+      "platform": "UI solutions for AI powered applications"
+    },
+    {
+      "date": "Jan 2020",
+      "title": "Sr. UI Engineer",
+      "city": "Chattanooga",
+      "state": "TN",
+      "company": "CodeScience",
+      "companyURL": "https://codescience.com",
+      "tech": ["Lightning Web Components", "Angular", "Apex"],
+      "platform": "solutions on Salesforce"
+    }
+  ]
+}
