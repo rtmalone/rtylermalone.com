@@ -6,7 +6,7 @@ import profilePic from "../static/images/rtm_2019.jpg";
 import json from "../utils/data.json";
 
 export default function Temp() {
-  const careerData = json.data;
+  const careerData = json.career;
   const [expand, setExpand] = useState(false);
   const [step, setStep] = useState(careerData.length - 1);
   const tech = Utilities.setCopy(careerData[step]);
