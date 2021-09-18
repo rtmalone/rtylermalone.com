@@ -49,6 +49,7 @@ ol {
 }
 
 small {
+  display: block;
   cursor: pointer;
   transition: background-color 0.3s var(--customEase);
 }
@@ -73,5 +74,9 @@ small:hover {
 
   .expand {
     height: 228px;
+  }
+
+  small {
+    display: none;
   }
 }
