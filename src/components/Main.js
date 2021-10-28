@@ -13,7 +13,7 @@ export default function Temp() {
           src={profilePic}
           alt="Tyler Malone"
         />
-        <div>
+        <div className={styles.name}>
           <h1>Tyler</h1>
           <h1>Malone</h1>
         </div>

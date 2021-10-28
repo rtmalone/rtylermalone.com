@@ -30,6 +30,12 @@ p {
   margin: 0;
 }
 
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
 .bio {
   transition: height 200ms ease-in;
   overflow: hidden;
