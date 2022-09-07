@@ -26,14 +26,14 @@ export const seasonalThemes = {
   summer: {
     primary: "#F3872F",
     secondary: "#FF598F",
-    text: "#c32089",
-    link: "#f3c12f"
+    text: "#ad1d7a",
+    link: "#facb42"
   },
   spring: {
     primary: "#FFF1A6",
     secondary: "#F5AD94",
     text: "#f06f41",
-    link: "#f6ff72"
+    link: "#f6ff78"
   },
   autumn: {
     primary: "#D45B12",
