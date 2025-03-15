@@ -16,7 +16,7 @@ export const employmentHistory = [
     company: "Thrivent Financial",
     title: "Contract Engineer",
     startYear: 2024,
-    employmentYears: 0,
+    employmentYears: 1,
     stack: ["Lightning Web Components", "OmniStudio", "Apex", "Github Actions"],
     summary: "Building a new Financial Advisor experience on Salesforce while mentoring junior developers.",
     description: "Using OmniStudio and custom LWCs to build an extensive Financial Advisor dashboard combining protfolio, product, and client data from external sources across the entire Thrivent organization. Implemented HMAC security to access an external app producing client facing PDFs."
