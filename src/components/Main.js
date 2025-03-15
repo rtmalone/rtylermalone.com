@@ -52,15 +52,14 @@ export default function Main() {
             >
               <p>
                 Tyler is a software engineer based in Chattanooga, TN building solutions
-                for Salesforce and experimenting with Agentic Coding at{" "}
+                for critical infrastructure management and experimenting with Agentic Coding at{" "}
                 <a href="https://citiri.com">Citiri</a>.
               </p>
-              <p style={{ fontSize: "1em" }}>
-                Previously, Tyler has worked on teams developing UI for AI powered applications, a social platform for
-                sport fans, a user powered broadcasting platform focused on sports,
-                and web apps supporting an innovative, 12-lead ECG system.
-                These various projects utilized React, Firebase, Google Cloud
-                Functions, AngularJS, Express, and jQuery.
+              <p style={{ fontSize: "1em", marginBottom: "0" }}>
+              Previously, Tyler has worked on teams creating software solutions for Salesforce ISVs,
+              UI for AI powered applications, a social platform for sport fans, and web apps supporting an innovative, 12-lead ECG system.
+              Tyler also devotes time to his local community serving as a Den Leader for Cub Scouts
+              and Vice President of the <a href="https://www.barnardastronomy.org/">Barnard Astronomical Society</a>.
               </p>
             </div>
           ) : activeJob && (
