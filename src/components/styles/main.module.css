@@ -56,14 +56,6 @@ p {
   height: 120%;
 }
 
-.collapse {
-  height: 120px;
-}
-
-.expand {
-  height: 300px;
-}
-
 small {
   cursor: pointer;
   transition: background-color 0.3s var(--customEase);
@@ -121,14 +113,6 @@ small:hover {
 
   p {
     font-size: 1.2em;
-  }
-
-  .collapse {
-    height: 100px;
-  }
-
-  .expand {
-    height: 228px;
   }
 }
 

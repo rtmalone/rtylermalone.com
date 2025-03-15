@@ -48,7 +48,7 @@ export default function Main() {
         
           {showPersonalBio ? (
             <div
-              className={`${styles.bio} ${expand ? styles.expand : styles.collapse}`}
+              className={styles.bio}
             >
               <p>
                 Tyler is a software engineer based in Chattanooga, TN building solutions
@@ -84,12 +84,6 @@ export default function Main() {
             </div>
           )}
         </div>
-        
-        {showPersonalBio && (
-          <small onClick={() => setExpand(!expand)}>
-            {expand ? "Oh, that's nice." : "What else?"}
-          </small>
-        )}
     </>
   );
 }
