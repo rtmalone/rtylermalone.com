@@ -69,10 +69,7 @@ export default function Main() {
             >
               <div className={styles.jobHeader}>
                 <h2>{activeJob.company}</h2>
-                <h3>{activeJob.title} • {activeJob.startYear}{activeJob.employmentYears > 1 ? ` - ${activeJob.startYear + activeJob.employmentYears}` : ""}</h3>
-                {/* <div className={styles.employmentYears}>
-                  <span>{activeJob.employmentYears} {activeJob.employmentYears === 1 ? 'year' : 'years'}</span>
-                </div> */}
+                <h4>{activeJob.title} • {activeJob.startYear}{activeJob.employmentYears > 1 ? ` - ${activeJob.startYear + activeJob.employmentYears}` : ""}</h4>
                 <div className={styles.techStack}>
                   {activeJob.stack.map((tech, index) => (
                     <span key={index} className={styles.techItem}>{tech}</span>

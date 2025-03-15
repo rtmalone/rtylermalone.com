@@ -24,7 +24,7 @@ export const employmentHistory = [
   {
     id: "codescience",
     company: "CodeScience",
-    title: "Web Engineer",
+    title: "Senior Engineer",
     startYear: 2020,
     employmentYears: 4,
     stack: ["Lightning Web Components", "Lightning Aura","Apex", "SF CLI"],

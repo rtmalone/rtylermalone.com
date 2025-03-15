@@ -68,19 +68,20 @@ small:hover {
 
 .jobHeader {
   margin-bottom: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
 .jobHeader h2 {
   margin: 0;
   font-size: 1.6em;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
-.jobHeader h3 {
+.jobHeader h4 {
   margin: 0.2rem 0 0.4rem;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 400;
-  opacity: 0.8;
 }
 
 .employmentYears {
@@ -101,9 +102,9 @@ small:hover {
   padding: 0.2rem 0.6rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: rgba(var(--primary-color-rgb), 0.1);
+  background-color: rgba(var(--text-color-rgb), 0.1);
   border-radius: 20px;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 @media (min-width: 700px) {

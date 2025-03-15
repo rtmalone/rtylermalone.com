@@ -51,6 +51,7 @@
   background-color: var(--text-color);
   transition: all 0.3s ease;
   position: relative;
+  transform: translateX(-0.01rem);
 }
 
 .active .timelineYear {
