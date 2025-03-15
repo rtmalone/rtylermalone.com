@@ -46,9 +46,11 @@
 }
 
 :root {
-  --secondary: #b0c4de;
-  --primary: rgba(34, 174, 195, 1);
+  --secondary-color: #b0c4de;
+  --primary-color: rgba(34, 174, 195, 1);
+  --primary-color-rgb: 34, 174, 195;
   --text-color: #345acd;
+  --text-color-rgb: 52, 90, 205;
   --link-color: #7fffd4;
   --articBlue: rgb(43, 225, 243);
   --darkBlue: #345acd;
@@ -69,9 +71,9 @@ body {
   font-family: var(--raleway);
   font-weight: 400;
   font-size: 15px;
-  background: var(--lightBlue);
-  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%)
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%)
     no-repeat;
+  min-height: 100vh;
   /* background: var(--lightBlue);
   background: linear-gradient(180deg, var(--teal) 0%, #010000 100%) no-repeat; */
   /* background: rgb(0, 144, 255);

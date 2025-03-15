@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import Routes from "./routes";
+import AppRoutes from "./routes";
 import Footer from "./components/Footer";
 import ThemePicker from "./components/ThemePicker";
 import { setTheme } from "./utils/setTheme";
@@ -9,26 +9,22 @@ import { getMonth } from "./utils/getMonth";
 import styles from "./app.module.css";
 import { seasonalThemes } from "./theme";
 
-class App extends PureComponent {
-  state = {
-    currentSeason: null
-  };
-  componentDidMount() {
+function App() {
+  useEffect(() => {
     const month = getMonth();
-    setTheme(seasonalThemes[month]);
-  }
+    const initialTheme = seasonalThemes[month] || seasonalThemes.default;
+    setTheme(initialTheme);
+  }, []);
 
-  render() {
-    return (
-      <BrowserRouter>
-        <div className={styles.app}>
-          <ThemePicker currentSeason={this.state.currentSeason} />
-          <Routes />
-          <Footer />
-        </div>
-      </BrowserRouter>
-    );
-  }
+  return (
+    <BrowserRouter>
+      <div className={styles.app}>
+        <ThemePicker currentSeason={null} />
+        <AppRoutes />
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
