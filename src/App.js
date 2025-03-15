@@ -12,7 +12,8 @@ import { seasonalThemes } from "./theme";
 function App() {
   useEffect(() => {
     const month = getMonth();
-    setTheme(seasonalThemes[month]);
+    const initialTheme = seasonalThemes[month] || seasonalThemes.default;
+    setTheme(initialTheme);
   }, []);
 
   return (

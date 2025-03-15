@@ -1,5 +1,8 @@
 .main {
   width: 300px;
+  position: relative;
+  margin: 0 auto;
+  margin-left: calc(15% + 6rem);
 }
 
 h1 {
@@ -18,6 +21,12 @@ p {
   border-radius: 5px;
   opacity: 0.9;
   margin-right: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.profilePic:hover {
+  opacity: 1;
 }
 
 .heading {
@@ -34,6 +43,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  cursor: pointer;
 }
 
 .bio {
@@ -60,6 +70,39 @@ small:hover {
   color: var(--link-color);
 }
 
+.jobHeader {
+  margin-bottom: 1rem;
+}
+
+.jobHeader h2 {
+  margin: 0;
+  font-size: 1.6em;
+  color: var(--primary-color);
+}
+
+.jobHeader h3 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: 1.2em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.techItem {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  border-radius: 20px;
+  color: var(--primary-color);
+}
+
 @media (min-width: 700px) {
   .main {
     width: 600px;
@@ -75,5 +118,13 @@ small:hover {
 
   .expand {
     height: 228px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
   }
 }
