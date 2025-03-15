@@ -10,12 +10,6 @@ export default function Main() {
   const [activeJob, setActiveJob] = useState(null);
   const [showPersonalBio, setShowPersonalBio] = useState(true);
 
-  // Initialize with personal bio showing
-  useEffect(() => {
-    // Do not automatically select a job on initial load
-    // Just keep the personal bio showing
-  }, []);
-
   const handleYearClick = (year) => {
     setActiveYear(year);
     const selectedJob = employmentHistory.find(job => job.year === year);
@@ -46,11 +40,10 @@ export default function Main() {
           </div>
         </div>
         
-        <div
-          className={`${styles.bio} ${expand ? styles.expand : styles.collapse}`}
-        >
           {showPersonalBio ? (
-            <>
+            <div
+              className={`${styles.bio} ${expand ? styles.expand : styles.collapse}`}
+            >
               <p>
                 Tyler is a software engineer based in Chattanooga, TN building solutions
                 for Salesforce with Lightning Web Components & Apex at{" "}
@@ -63,9 +56,11 @@ export default function Main() {
                 These various projects utilized React, Firebase, Google Cloud
                 Functions, AngularJS, Express, and jQuery.
               </p>
-            </>
+            </div>
           ) : activeJob && (
-            <>
+            <div
+              className={styles.employment}
+            >
               <div className={styles.jobHeader}>
                 <h2>{activeJob.company}</h2>
                 <h3>{activeJob.title} • {activeJob.year}</h3>
@@ -77,9 +72,8 @@ export default function Main() {
               </div>
               <p>{activeJob.summary}</p>
               <p style={{ fontSize: "1em" }}>{activeJob.description}</p>
-            </>
+            </div>
           )}
-        </div>
         
         {showPersonalBio && (
           <small onClick={() => setExpand(!expand)}>
