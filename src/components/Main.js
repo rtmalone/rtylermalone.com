@@ -51,9 +51,9 @@ export default function Main() {
               className={`${styles.bio} ${expand ? styles.expand : styles.collapse}`}
             >
               <p>
-                Tyler is a web engineer based in Chattanooga, TN building solutions
-                for Salesforce with Lightning Web Components, Angular & Apex at{" "}
-                <a href="https://codescience.com">CodeScience</a>.
+                Tyler is a software engineer based in Chattanooga, TN building solutions
+                for Salesforce and experimenting with Agentic Coding at{" "}
+                <a href="https://citiri.com">Citiri</a>.
               </p>
               <p style={{ fontSize: "1em" }}>
                 Previously, Tyler has worked on teams developing UI for AI powered applications, a social platform for
