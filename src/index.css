@@ -46,15 +46,15 @@
 }
 
 :root {
-  --secondary-color: #b0c4de;
-  --primary-color: rgba(34, 174, 195, 1);
-  --primary-color-rgb: 34, 174, 195;
-  --text-color: #345acd;
-  --text-color-rgb: 52, 90, 205;
-  --link-color: #7fffd4;
+  --secondary-color: #a8bdd4;
+  --primary-color: #1ba8b5;
+  --primary-color-rgb: 27, 168, 181;
+  --text-color: #1a3a7a;
+  --text-color-rgb: 26, 58, 122;
+  --link-color: #d4f5ec;
   --articBlue: rgb(43, 225, 243);
-  --darkBlue: #345acd;
-  --aquamarine: #7fffd4;
+  --darkBlue: #2a4eb8;
+  --aquamarine: #5ce0c4;
   --raleway: "Raleway", sans-serif;
   --oswald: "Oswald", sans-serif;
   --customEase: cubic-bezier(0, 0.75, 1, 0.67);
@@ -74,16 +74,6 @@ body {
   background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%)
     no-repeat;
   min-height: 100vh;
-  /* background: var(--lightBlue);
-  background: linear-gradient(180deg, var(--teal) 0%, #010000 100%) no-repeat; */
-  /* background: rgb(0, 144, 255);
-  background: linear-gradient(
-      180deg,
-      rgba(0, 144, 255, 1) 4%,
-      rgba(0, 191, 255, 1) 40%,
-      rgba(0, 243, 255, 1) 100%
-    )
-    no-repeat; */
 }
 h1,
 h2,
