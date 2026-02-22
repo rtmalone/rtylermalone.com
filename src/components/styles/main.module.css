@@ -1,3 +1,9 @@
+.contentRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .main {
   width: 300px;
   position: relative;
@@ -130,6 +136,12 @@ p {
 }
 
 @media (max-width: 768px) {
+  .contentRow {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
   .main {
     margin: 0 auto;
     width: 90%;

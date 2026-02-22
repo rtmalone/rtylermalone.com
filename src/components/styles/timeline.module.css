@@ -1,13 +1,26 @@
+.timelineWrapper {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .timeline {
-  position: fixed;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 5rem;
   z-index: 2;
+  max-height: 18rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 0.5rem 0;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.timeline::-webkit-scrollbar {
+  display: none;
 }
 
 .timelineNode {
@@ -15,10 +28,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  margin: 1rem 0;
+  padding: 0.4rem 0;
   cursor: pointer;
   position: relative;
   width: 100%;
+  scroll-snap-align: center;
 }
 
 .timelineYear {
@@ -27,31 +41,35 @@
   transition: all 0.3s ease;
   font-weight: 500;
   color: var(--text-color);
+  white-space: nowrap;
 }
 
-.timelineNode::before {
-  content: '';
-  width: 1px;
-  height: 5rem;
+.minorTicks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.minorTick {
+  width: 10px;
+  height: 1px;
   background-color: var(--text-color);
-  position: absolute;
-  top: -3em;
-  right: 6px;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
-.timelineNode:first-child::before {
-  display: none;
-}
-
-.timelineDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.timelineTick {
+  width: 20px;
+  height: 2px;
+  border-radius: 0;
   background-color: var(--text-color);
   transition: all 0.3s ease;
   position: relative;
-  transform: translateX(-0.01rem);
+}
+
+.timelineNode:hover .timelineYear {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .active .timelineYear {
@@ -59,27 +77,77 @@
   font-weight: 700;
 }
 
-.active .timelineDot {
-  width: 16px;
-  height: 16px;
-  box-shadow: 0 0 0 4px rgba(var(--text-color-rgb), 0.2);
-  transform: translateX(1px);
+.active:hover .timelineYear {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.active .timelineTick {
+  width: 28px;
+  height: 3px;
+}
+
+/* Chevron scroll indicators */
+.chevron {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.chevron:hover {
+  opacity: 1;
+}
+
+.chevronHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.chevronIcon {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  line-height: 1;
+  display: block;
+}
+
+.chevronUp .chevronIcon {
+  transform: rotate(90deg);
+}
+
+.chevronDown .chevronIcon {
+  transform: rotate(-90deg);
 }
 
 @media (max-width: 768px) {
+  .timelineWrapper {
+    width: 100%;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .timeline {
     position: relative;
-    left: 0;
     top: 0;
     transform: none;
-    width: 100%;
+    flex: 1;
     flex-direction: row;
     align-items: center;
     margin-bottom: 1rem;
+    max-height: none;
     overflow-x: auto;
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     padding: 0.5rem 1rem;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
 
   .timeline::-webkit-scrollbar {
@@ -99,11 +167,39 @@
     margin-bottom: 0.5rem;
   }
 
-  .timelineNode::before {
-    display: none;
+  .minorTicks {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 0 2px;
   }
 
-  .active .timelineDot {
-    transform: translateY(-2px);
+  .minorTick {
+    width: 1px;
+    height: 8px;
   }
-} 
+
+  .timelineTick {
+    width: 2px;
+    height: 12px;
+  }
+
+  .active .timelineTick {
+    width: 3px;
+    height: 18px;
+  }
+
+  .chevronUp .chevronIcon {
+    transform: rotate(0deg);
+  }
+
+  .chevronDown .chevronIcon {
+    transform: rotate(180deg);
+  }
+
+  .chevron {
+    width: auto;
+    padding: 0 0.2rem;
+    flex-shrink: 0;
+  }
+}

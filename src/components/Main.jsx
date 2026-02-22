@@ -26,7 +26,7 @@ export default function Main() {
   };
 
   return (
-    <>
+    <div className={styles.contentRow}>
       <Timeline activeJobId={activeJobId} onYearClick={handleYearClick} />
 
       <div className={styles.main}>
@@ -91,6 +91,6 @@ export default function Main() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
