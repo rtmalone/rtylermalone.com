@@ -6,7 +6,7 @@ export const employmentHistory = [
     company: "Citiri",
     title: "Senior Software Engineer",
     startYear: 2025,
-    employmentYears: 0,
+    employmentYears: 1,
     stack: ["Lightning Web Components", "Lightning Aura", "Apex", "D3.js", "DHTMLX Gantt"],
     summary: "Developing owner-scope project management tools for critical infrastructure.",
     description: "Bringing a 2GP package to feature parity with an older package in order to go to market with a modular solution. Alongside the development of the new package, I'm also maintaining the legacy codebase by addressing bugs that affect current customers."
