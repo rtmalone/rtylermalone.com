@@ -76,24 +76,15 @@ const Timeline = ({ activeJobId, onYearClick }) => {
         <span className={styles.chevronIcon}>&#8249;</span>
       </button>
       <div className={styles.timeline} ref={scrollRef}>
-        {sortedHistory.map((job, index) => (
-          <React.Fragment key={job.id}>
-            {index > 0 && (
-              <div className={styles.minorTicks}>
-                <div className={styles.minorTick} />
-                <div className={styles.minorTick} />
-                <div className={styles.minorTick} />
-              </div>
-            )}
-            <div
-              data-job-id={job.id}
-              className={`${styles.timelineNode} ${activeJobId === job.id ? styles.active : ''}`}
-              onClick={() => onYearClick(job.id)}
-            >
-              <div className={styles.timelineYear}>{job.startYear}</div>
-              <div className={styles.timelineTick}></div>
-            </div>
-          </React.Fragment>
+        {sortedHistory.map((job) => (
+          <div
+            key={job.id}
+            data-job-id={job.id}
+            className={`${styles.timelineNode} ${activeJobId === job.id ? styles.active : ''}`}
+            onClick={() => onYearClick(job.id)}
+          >
+            <span className={styles.timelineYear}>{job.startYear}</span>
+          </div>
         ))}
       </div>
       <button

@@ -84,7 +84,7 @@ export default function Main() {
                   className={styles.tellMeMore}
                   onClick={() => setExpanded(!expanded)}
                 >
-                  {expanded ? "oh, that's nice" : "tell me more"}
+                  {expanded ? "Oh, That's Nice" : "Tell Me More"}
                 </button>
               </>
             )}

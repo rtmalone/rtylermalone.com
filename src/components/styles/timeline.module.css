@@ -9,14 +9,18 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
   z-index: 2;
-  max-height: 18rem;
+  max-height: 12rem;
   overflow-y: auto;
   scrollbar-width: none;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.25rem;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .timeline::-webkit-scrollbar {
@@ -25,66 +29,38 @@
 
 .timelineNode {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0.4rem 0;
+  justify-content: center;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  position: relative;
-  width: 100%;
   scroll-snap-align: center;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.timelineNode:hover {
+  background: rgba(var(--text-color-rgb), 0.08);
 }
 
 .timelineYear {
   font-size: 1rem;
-  margin-right: 0.8rem;
   transition: all 0.3s ease;
   font-weight: 500;
   color: var(--text-color);
   white-space: nowrap;
 }
 
-.minorTicks {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.6rem;
-}
-
-.minorTick {
-  width: 10px;
-  height: 1px;
-  background-color: var(--text-color);
-  opacity: 0.35;
-}
-
-.timelineTick {
-  width: 20px;
-  height: 2px;
-  border-radius: 0;
-  background-color: var(--text-color);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.timelineNode:hover .timelineYear {
-  font-size: 1.1rem;
-  font-weight: 600;
+.active {
+  background: rgba(var(--text-color-rgb), 0.12);
 }
 
 .active .timelineYear {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
 }
 
-.active:hover .timelineYear {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.active .timelineTick {
-  width: 28px;
-  height: 3px;
+.active:hover {
+  background: rgba(var(--text-color-rgb), 0.12);
 }
 
 /* Chevron scroll indicators */
@@ -92,11 +68,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.2rem 0;
+  padding: 0.8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   opacity: 0.5;
   transition: opacity 0.3s ease;
 }
@@ -112,23 +87,26 @@
 
 .chevronIcon {
   color: var(--text-color);
-  font-size: 2.2rem;
-  line-height: 1;
+  font-size: 2.5rem;
+  line-height: 0;
   display: block;
 }
 
 .chevronUp .chevronIcon {
   transform: rotate(90deg);
+  margin-left: 0.2rem;
 }
 
 .chevronDown .chevronIcon {
   transform: rotate(-90deg);
+  margin-right: 0.2rem;
 }
 
 @media (max-width: 768px) {
   .timelineWrapper {
     width: 100%;
     margin-top: 0;
+    margin-bottom: 1rem;
     flex-direction: row;
     align-items: center;
   }
@@ -140,12 +118,11 @@
     flex: 1;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 1rem;
     max-height: none;
     overflow-x: auto;
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.15rem;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
   }
@@ -155,38 +132,13 @@
   }
 
   .timelineNode {
-    margin: 0 1rem;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
+    margin: 0;
     flex-shrink: 0;
+    padding: 0.25rem 0.75rem;
   }
 
   .timelineYear {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .minorTicks {
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    padding: 0 2px;
-  }
-
-  .minorTick {
-    width: 1px;
-    height: 8px;
-  }
-
-  .timelineTick {
-    width: 2px;
-    height: 12px;
-  }
-
-  .active .timelineTick {
-    width: 3px;
-    height: 18px;
+    margin-bottom: 0;
   }
 
   .chevronUp .chevronIcon {
@@ -199,7 +151,7 @@
 
   .chevron {
     width: auto;
-    padding: 0 0.2rem;
+    padding: 0 0.4rem;
     flex-shrink: 0;
   }
 }
