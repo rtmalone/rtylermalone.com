@@ -1,4 +1,1 @@
-{
-  "database": "dolt",
-  "jsonl_export": "issues.jsonl"
-}
+{"backend":"jsonl","jsonl_export":"issues.jsonl"}
