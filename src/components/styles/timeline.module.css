@@ -1,6 +1,6 @@
 .timeline {
   position: fixed;
-  left: 22%;
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -74,9 +74,16 @@
     transform: none;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1rem;
+    scrollbar-width: none;
+  }
+
+  .timeline::-webkit-scrollbar {
+    display: none;
   }
 
   .timelineNode {
@@ -84,21 +91,18 @@
     flex-direction: column;
     align-items: center;
     width: auto;
+    flex-shrink: 0;
   }
-  
+
   .timelineYear {
     margin-right: 0;
     margin-bottom: 0.5rem;
   }
 
   .timelineNode::before {
-    width: 4rem;
-    height: 1px;
-    top: 50%;
-    right: auto;
-    left: -2rem;
+    display: none;
   }
-  
+
   .active .timelineDot {
     transform: translateY(-2px);
   }

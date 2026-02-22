@@ -1,12 +1,12 @@
 .themePicker {
   display: flex;
-  margin: 0px;
-  position: absolute;
-  top: 8px;
-  padding: 0px;
+  margin: 0;
+  position: relative;
+  padding: 10px 0;
   justify-content: space-evenly;
   width: 100%;
   font-size: 14px;
+  z-index: 10;
 }
 
 .themePicker li {
@@ -29,9 +29,12 @@
 
 @media (min-width: 700px) {
   .themePicker {
+    position: absolute;
+    top: 8px;
     left: 8px;
     flex-direction: column;
     width: initial;
+    padding: 0;
   }
   .themePicker li + li {
     margin-top: 10px;

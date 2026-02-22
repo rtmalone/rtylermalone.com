@@ -1,44 +1,44 @@
 export const colors = {
-  lightBlue: "#b0c4de",
-  darkBlue: "#345acd",
-  teal: "rgba(34, 174, 195, 1)",
-  aquamarine: "#7fffd4"
+  lightBlue: "#a8bdd4",
+  darkBlue: "#2a4eb8",
+  teal: "#1ba8b5",
+  aquamarine: "#5ce0c4"
 };
 
 export const fonts = {
-  releway: `"Raleway", sans-serif`,
-  oswald: `"Oswald, sans-serif`
+  raleway: `"Raleway", sans-serif`,
+  oswald: `"Oswald", sans-serif`
 };
 
 export const seasonalThemes = {
   default: {
-    primary: "rgba(34, 174, 195, 1)",
-    secondary: "#b0c4de",
-    text: "#345acd",
-    link: "#7fffd4"
+    primary: "#1ba8b5",
+    secondary: "#8facc8",
+    text: "#0f2e5e",
+    link: "#c8f0e4"
   },
   winter: {
-    primary: "#cbcbcb",
-    secondary: "#84A5B8",
-    text: "#42687C",
-    link: "#b3f1f1"
+    primary: "#a4b8cc",
+    secondary: "#5d839c",
+    text: "#142e3f",
+    link: "#c8e8eb"
   },
   summer: {
-    primary: "#F3872F",
-    secondary: "#FF598F",
-    text: "#ad1d7a",
-    link: "#facb42"
+    primary: "#e87a2e",
+    secondary: "#d94870",
+    text: "#fff5eb",
+    link: "#3d1428"
   },
   spring: {
-    primary: "#FFF1A6",
-    secondary: "#F5AD94",
-    text: "#f06f41",
-    link: "#f6ff78"
+    primary: "#f2df7a",
+    secondary: "#e49478",
+    text: "#5e2210",
+    link: "#fff6d4"
   },
   autumn: {
-    primary: "#D45B12",
-    secondary: "#9C2706",
-    text: "#f4eda1",
-    link: "#6f1800"
+    primary: "#b84a0e",
+    secondary: "#7a1e06",
+    text: "#f0ddb0",
+    link: "#401200"
   }
 };

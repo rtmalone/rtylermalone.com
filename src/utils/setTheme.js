@@ -10,8 +10,8 @@ export const setTheme = theme => {
   // Set RGB values for the primary color for use in rgba functions
   const primaryRgb = hexToRgb(theme.primary);
   const textRgb = hexToRgb(theme.text);
-  root.style.setProperty("--primary-color-rgb", primaryRgb || "34, 174, 195");
-  root.style.setProperty("--text-color-rgb", textRgb || "52, 90, 205");
+  root.style.setProperty("--primary-color-rgb", primaryRgb || "27, 168, 181");
+  root.style.setProperty("--text-color-rgb", textRgb || "26, 58, 122");
   
   // Set the gradient background
   document.body.style.background = `linear-gradient(180deg, ${theme.primary} 0%, ${theme.secondary} 100%) no-repeat`;
