@@ -2,6 +2,17 @@
 
 export const employmentHistory = [
   {
+    id: "citiri-hai",
+    company: "Citiri",
+    title: "Principal Engineer & Head of AI",
+    startYear: 2026,
+    employmentYears: 0,
+    stack: ["LLMs", "Agents", "Agentic Systems", "Lightning Web Components", "Apex", "other JS libraries"],
+    summary: "Leading engineering and AI strategy at Citiri, building the next generation of owner operations scope management for construction and facilities.",
+    description: "On the engineering side, I architect and maintain Citiri's suite of software products — designing trigger frameworks, data access layers, dynamic query engines, and Lightning Web Components that scale across namespaced and subscriber orgs. As Head of AI, I'm driving the adoption of agentic workflows across our engineering organization, architecting AI-augmented development pipelines where code agents handle TDD enforcement, automated code review, PR remediation, security analysis, and schema-aware scaffolding.",
+    extendedDescription: "Our platform, CitiriOS, helps owners manage complex project portfolios — tracking scope, requirements, risks, and issues across the full asset lifecycle. What I'm most excited about: proving that small, focused teams augmented by well-orchestrated AI agents can ship enterprise-grade software at a pace that was previously impossible. The future of engineering leadership isn't choosing between humans and AI — it's designing the system where both do their best work."
+  },
+  {
     id: "citir",
     company: "Citiri",
     title: "Senior Software Engineer",
