@@ -31,12 +31,11 @@
   .themePicker {
     position: absolute;
     top: 8px;
-    left: 8px;
+    right: 8px;
     flex-direction: column;
+    align-items: flex-end;
     width: initial;
     padding: 0;
-  }
-  .themePicker li + li {
-    margin-top: 10px;
+    gap: 10px;
   }
 }
