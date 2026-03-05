@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- `npm run dev` — Start development server (Create React App / react-scripts)
+- `npm run dev` — Start Vite development server (localhost:3000)
 - `npm run build` — Production build
 - `npm run deploy` — Build + deploy to Firebase Hosting
 - `npm test` — Run tests (Jest via react-scripts, interactive watch mode)
@@ -36,6 +36,12 @@ Issues are stored in `.beads/issues.jsonl` (one JSON object per line).
 - `bd sync` — Sync with git
 
 See `AGENTS.md` for the full session completion workflow (landing the plane).
+
+## Git Workflow
+
+- **Main branch**: `master` — all feature branches should be created from and merged back into `master`
+- **Feature branches**: Use `feature/<name>` naming convention
+- There is no `develop` branch — work directly off `master`
 
 ## Architecture
 

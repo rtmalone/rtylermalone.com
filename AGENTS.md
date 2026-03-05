@@ -1,5 +1,11 @@
 # Agent Instructions
 
+## Git Workflow
+
+- **Main branch**: `master` — create all feature branches from `master` and merge back into `master`
+- **Feature branches**: `feature/<name>`
+- There is no `develop` branch
+
 This project uses **bd** (beads) for issue tracking. Issues live in `.beads/issues.jsonl`.
 
 ## Issue Tracking (JSONL workaround)
