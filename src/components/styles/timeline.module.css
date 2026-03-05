@@ -1,88 +1,140 @@
+/* ── Desktop: editorial career bar chart ── */
+
 .timelineWrapper {
   position: relative;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  min-width: 160px;
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  z-index: 2;
-  max-height: 12rem;
-  overflow-y: auto;
-  scrollbar-width: none;
-  padding: 0.5rem 0.25rem;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  gap: 2px;
+  padding: 0.25rem 0;
 }
 
-.timeline::-webkit-scrollbar {
-  display: none;
-}
-
-.timelineNode {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
+.entry {
+  position: relative;
   cursor: pointer;
-  scroll-snap-align: center;
-  border-radius: 0.5rem;
-  transition: background 0.2s ease;
+  padding: 0.45rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.25s ease;
+  opacity: 0;
+  transform: translateX(-12px);
 }
 
-.timelineNode:hover {
-  background: rgba(var(--text-color-rgb), 0.08);
+.entry.entered {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) var(--stagger),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) var(--stagger),
+    background 0.25s ease;
 }
 
-.timelineYear {
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  font-weight: 500;
+.entry:hover {
+  background: rgba(var(--text-color-rgb), 0.06);
+}
+
+.entryInner {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.year {
+  font-family: var(--oswald);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--text-color);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.company {
+  font-family: var(--raleway);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-color);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  line-height: 1;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Tenure bar — proportional width visualization */
+.tenureBar {
+  height: 3px;
+  border-radius: 1.5px;
+  background: rgba(var(--text-color-rgb), 0.08);
+  overflow: hidden;
+  width: 100%;
+}
+
+.tenureFill {
+  height: 100%;
+  width: var(--tenure);
+  border-radius: 1.5px;
+  background: rgba(var(--text-color-rgb), 0.2);
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+/* Hover state */
+.entry:hover .year {
+  opacity: 0.8;
+}
+
+.entry:hover .company {
+  opacity: 0.55;
+}
+
+.entry:hover .tenureFill {
+  background: rgba(var(--text-color-rgb), 0.35);
+}
+
+/* Active state */
 .active {
-  background: rgba(var(--text-color-rgb), 0.12);
+  background: rgba(var(--text-color-rgb), 0.08);
+  border-left: 3px solid var(--text-color);
+  padding-left: calc(0.6rem - 3px);
 }
 
-.active .timelineYear {
+.active .year {
+  opacity: 1;
   font-size: 1.15rem;
-  font-weight: 700;
+}
+
+.active .company {
+  opacity: 0.7;
+}
+
+.active .tenureBar {
+  height: 4px;
+}
+
+.active .tenureFill {
+  background: var(--text-color);
+  opacity: 0.55;
 }
 
 .active:hover {
-  background: rgba(var(--text-color-rgb), 0.12);
+  background: rgba(var(--text-color-rgb), 0.1);
 }
 
-/* Chevron scroll indicators */
+/* Chevrons — hidden on desktop, visible on mobile */
 .chevron {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.8rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.chevron:hover {
-  opacity: 1;
-}
-
-.chevronHidden {
-  visibility: hidden;
-  pointer-events: none;
+  display: none;
 }
 
 .chevronIcon {
@@ -92,15 +144,12 @@
   display: block;
 }
 
-.chevronUp .chevronIcon {
-  transform: rotate(90deg);
-  margin-left: 0.2rem;
+.chevronHidden {
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.chevronDown .chevronIcon {
-  transform: rotate(-90deg);
-  margin-right: 0.2rem;
-}
+/* ── Mobile: horizontal year strip (preserved) ── */
 
 @media (max-width: 768px) {
   .timelineWrapper {
@@ -109,36 +158,90 @@
     margin-bottom: 1rem;
     flex-direction: row;
     align-items: center;
+    min-width: 0;
   }
 
   .timeline {
-    position: relative;
-    top: 0;
-    transform: none;
     flex: 1;
     flex-direction: row;
     align-items: center;
-    max-height: none;
+    gap: 0;
     overflow-x: auto;
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     padding: 0.25rem 0.15rem;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 8px;
   }
 
   .timeline::-webkit-scrollbar {
     display: none;
   }
 
-  .timelineNode {
-    margin: 0;
+  .entry {
     flex-shrink: 0;
     padding: 0.25rem 0.75rem;
+    scroll-snap-align: center;
+    border-radius: 0.5rem;
+    opacity: 1;
+    transform: none;
   }
 
-  .timelineYear {
+  .entry.entered {
+    transition: background 0.2s ease;
+  }
+
+  /* Hide desktop-only elements on mobile */
+  .entryInner {
     margin-bottom: 0;
+  }
+
+  .company {
+    display: none;
+  }
+
+  .tenureBar {
+    display: none;
+  }
+
+  .year {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 1;
+    white-space: nowrap;
+  }
+
+  .active {
+    background: rgba(var(--text-color-rgb), 0.12);
+    border-left: none;
+    padding-left: 0.75rem;
+  }
+
+  .active .year {
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  /* Mobile chevrons */
+  .chevron {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 0.4rem;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chevron:hover {
+    opacity: 1;
   }
 
   .chevronUp .chevronIcon {
@@ -147,11 +250,5 @@
 
   .chevronDown .chevronIcon {
     transform: rotate(180deg);
-  }
-
-  .chevron {
-    width: auto;
-    padding: 0 0.4rem;
-    flex-shrink: 0;
   }
 }
